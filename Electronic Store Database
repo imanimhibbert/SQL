@@ -1,0 +1,47 @@
+-- Create an Electronic Store Database:
+/** Electronics:
+Air conditioner (30) (100) (7) (steve)
+Alarm Clock (21) (20) (5) (bob)
+Charger (20) (20) (8) (gary)
+Blender (15) (40) (7) (dave)
+Calculator (10) (80) (5) (jan)
+Fan (21) (60) (9) (sara)
+Computer (10) (100) (7) ken
+Camera (13) (90) (10) hanna
+Copier (28) (60) (8) paul
+Earphones (30) (80) (7) ethan
+Game (20) (70) (10) craig
+Juicer (21) (50) (8) dan
+Microphone (10) (40) (7) greg
+Microwave (25) (65) (6) jada
+iPod (20) (100) (9) dolly
+**/
+
+-- notice how I've described each piece of code!
+
+CREATE TABLE electronics (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, rating INTEGER, employee TEXT);
+
+INSERT INTO electronics VALUES (1, "air conditioner", 30, 100, 7, "steve");
+INSERT INTO electronics VALUES (2, "alarm clock", 21, 20, 5, "bob");
+INSERT INTO electronics VALUES (3, "charger", 20, 20, 8, "gary");
+INSERT INTO electronics VALUES (4, "blender", 15, 40, 7, "dave");
+INSERT INTO electronics VALUES (5, "calculator", 10, 80, 5, "jan");
+INSERT INTO electronics VALUES (6, "fan", 21, 60, 9, "sara");
+INSERT INTO electronics VALUES (7, "computer", 10, 100, 7, "ken");
+INSERT INTO electronics VALUES (8, "camera", 13, 90, 10, "hanna");
+INSERT INTO electronics VALUES (9, "copier", 28, 60, 8, "paul");
+INSERT INTO electronics VALUES (10, "earphones", 30, 80, 7, "ethan");
+INSERT INTO electronics VALUES (11, "game", 20, 70, 10, "craig");
+INSERT INTO electronics VALUES (12, "juicer", 21, 50, 8, "dan");
+INSERT INTO electronics VALUES (13, "microphone", 10, 40, 7, "greg");
+INSERT INTO electronics VALUES (14, "microwave", 25, 65, 6, "jada");
+INSERT INTO electronics VALUES (15, "iPod", 20, 100, 9, "dolly");
+
+-- displayed the database ordered by price.
+
+SELECT * FROM electronics ORDER BY price;
+
+-- displayed the total of items in stock.
+
+SELECT SUM (quantity) FROM electronics;
+
